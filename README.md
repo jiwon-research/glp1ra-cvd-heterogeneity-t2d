@@ -1,27 +1,23 @@
 # GLP-1RA Cardiovascular Risk Reduction Heterogeneity in Type 2 Diabetes
 
 Code repository for the study:  
-**"Consistency of Cardiovascular Risk Reduction Associated with Glucagon-Like Peptide-1 Receptor Agonists Among Patients with Type 2 Diabetes""**
+**"Consistency of Cardiovascular Risk Reduction Associated with Glucagon-Like Peptide-1 Receptor Agonists Among Patients with Type 2 Diabetes"**
 
 ---
 
 ## Repository Structure
 
 ```
-├── 01_initial_cohort_generation.ipynb       # Study cohort construction and eligibility criteria
-├── 02_outcome_identification.ipynb   # Outcome definitions and endpoint identification
-├── 03_mice_imputation.ipynb    # Multiple imputation for baseline covariates
-├── 04_analysis_pipeline.ipynb    # Main analysis pipeline including OW-pLASSO 
+├── 01_initial_cohort_generation.ipynb     # Study cohort construction and eligibility criteria
+├── 02_outcome_identification.ipynb        # Outcome definitions and endpoint identification
+├── 03_mice_imputation.ipynb               # Multiple imputation for baseline covariates
+├── 04_analysis_pipeline.ipynb             # Main analysis pipeline including OW-pLASSO 
 └── README.md
 ```
 
 ---
 
 ## Study Overview
-
-This repository contains code for the sutdy:
-
-**"Consistency of Cardiovascular Risk Reduction Associated with Glucagon-Like Peptide-1 Receptor Agonists Among Patients with Type 2 Diabetes"**
 
 This study evaluates whether cardiovascular risk reduction associated with glucagon-like peptide-1 receptor agonists (GLP-1RA) is consistent across clinically relevant patient subgroups among adults with type 2 diabetes in routine clinical practice in the United States.
 
@@ -60,7 +56,7 @@ Patients were further stratified into:
 All outcomes were assessed over a fixed 3-year follow-up period beginning at the index date.
 
 **Primary** 
-- The primary endpoint was time to first major adverse cardiovascular event (MACE) defined as the composite of myocardial infarction (MI), or stroke. 
+- The primary endpoint was time to first major adverse cardiovascular event (MACE), defined as the composite of myocardial infarction (MI) or stroke. 
 
 **Secondary** 
 - All-cause mortality
@@ -70,17 +66,11 @@ All outcomes were assessed over a fixed 3-year follow-up period beginning at the
 - Change in systolic blood pressure at 6 months
 - Change in hemoglobin A1c (HbA1c) at 6 months
 
-**Negative controls** 
-- Lumbar radiculopathy
-- Abdominal hernia
-
 ---
 
 ## Reproducibility
 
 All analyses are reproducible conditional on access to the study data.
-
-No additional seed is required in the analysis notebooks as all downstream steps (propensity score estimation, overlap weighting, Cox regression) are deterministic.
 
 ---
 
@@ -111,5 +101,5 @@ may apply for access at https://www.truveta.com.
 
 - Raw patient-level data are not included in this repository in accordance with data sharing agreements.
 - Access to the study data requires an authorized Truveta research environment.
-- Notebooks are intended to be run sequentially: `01_imputation.ipynb` → `02_analysis_*.ipynb` → `03_mice_imputation_*.ipynb` → `04_analysis_pipeline_*.ipynb`.
-- `04_analysis_pipeline_*.ipynb` includes the OW-pLASSO implementation for the primary endpoint in the type 2 diabetes secondary prevention cohort as a representative analytical workflow. Other analyses follow the same framework with cohort- and outcome-specific modifications.
+- Notebooks are intended to be run sequentially: `01_initial_study_cohort_generation.ipynb` → `02_outcome_identification.ipynb` → `03_mice_imputation.ipynb` → `04_analysis_pipeline.ipynb`.
+- `04_analysis_pipeline.ipynb` includes the OW-pLASSO implementation for the primary endpoint in the type 2 diabetes secondary prevention cohort as a representative analytical workflow. Other analyses follow the same framework with cohort- and outcome-specific modifications.
