@@ -44,7 +44,7 @@ Patients were further stratified into:
 | Missing data | Multiple imputation by chained equations (MICE; m=5) |
 | Confounder adjustment | Propensity score overlap weighting |
 | Heterogeneous treatment effect estimation | Overlap-weighted penalized LASSO (OW-pLASSO) |
-| Primary estimand | Average Treatment Effect in the Overlap population (ATO) |
+| Primary estimand | Subgroup Average Treatment Effect in the Overlap population (S-ATO) |
 | Time-to-event analysis | Weighted Cox proportional hazards models |
 | Variance | Robust sandwich SE; pooled via Rubin's rules |
 | Software | R 4.4.1 |
