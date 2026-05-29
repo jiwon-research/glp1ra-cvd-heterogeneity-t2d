@@ -99,7 +99,6 @@ may apply for access at https://www.truveta.com.
 
 ## Notes
 
-- Raw patient-level data are not included in this repository in accordance with data sharing agreements.
-- Access to the study data requires an authorized Truveta research environment.
-- Notebooks are intended to be run sequentially: `01_initial_study_cohort_generation.ipynb` → `02_outcome_identification.ipynb` → `03_mice_imputation.ipynb` → `04_analysis_pipeline.ipynb`.
-- `04_analysis_pipeline.ipynb` includes the OW-pLASSO implementation for the primary endpoint in the type 2 diabetes secondary prevention cohort as a representative analytical workflow. Other analyses follow the same framework with cohort- and outcome-specific modifications.
+- Data Privacy & Environment: Raw patient-level data are not included in this repository in accordance with data sharing agreements. Access to the study data requires an authorized Truveta research environment.
+- Execution order: Notebooks are intended to be run sequentially: `01_initial_study_cohort_generation.ipynb` → `02_outcome_identification.ipynb` → `03_mice_imputation.ipynb` → `04_analysis_pipeline.ipynb`.
+- Core Analytical Workflow (`04_analysis_pipeline.ipynb`): This notebook implements the main causal inference framework optimized for Causal Subgroup Analysis (SGA). To balance the bias-variance tradeoff inherent in high-dimensional observational data, we implemented the Overlap-Weighted Penalized LASSO (OW-pLASSO) algorithm (Yang et al., 2021). This notebook specifically contains the analytical workflow for the Type 2 Diabetes Secondary Prevention Cohort as the representative baseline. All other primary and secondary outcome analyses follow this identical framework with cohort- and outcome-specific modifications.
